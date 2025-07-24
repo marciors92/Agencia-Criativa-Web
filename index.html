@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência Criativa Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Logo Agência Criativa Web">
+                <h1>Agência Criativa Web</h1>
+            </div>
+            <nav>
+                <button class="menu-hamburguer" aria-label="Abrir menu">&#9776;</button>
+                <ul class="menu-navegacao">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre-nos">Sobre nós</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <picture>
+                    <source srcset="banner-pequeno.jpg 600w, banner-medio.jpg 1000w, banner.jpg 1600w"
+                        sizes="(max-width: 600px) 100vw, (max-width: 1000px) 100vw, 100vw" type="image/jpeg">
+                    <img src="banner.jpg" alt="BEM-VINDOS!">
+                </picture>
+                <div class="hero-conteudo">
+                    <h2>Transformando ideias em experiências digitais consistentes</h2>
+                    <p>Somos a Agência Criativa Web, sua parceira em design digital, desenvolvimento web e branding.
+                        Nossa paixão é criar soluções que impulsionam o seu negócio no mundo online.</p>
+                    <a href="#servicos" class="botao-principal">Conheça nossos serviços</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-nos" class="secao">
+            <div class="container">
+                <h2>Sobre nós</h2>
+                <p>Na Agência Criativa Web, acreditamos que um bom design vai além da estética. Ele resolve problemas,
+                    comunica mensagens e conecta marcas a pessoas. Nossa equipe é composta por designers e
+                    desenvolvedores apaixonados por inovação, que buscam constantemente as melhores práticas e
+                    tecnologias para entregar resultados excepcionais.</p>
+            </div>
+        </section>
+
+        <section id="servicos" class="secao">
+            <div class="container">
+                <h2>Nossos serviços</h2>
+                <div class="grid-servicos">
+                    <div class="cartao-servico">
+                        <img src="servico1.png" alt="Design Gráfico">
+                        <h3>Design Gráfico</h3>
+                        <p>Criação de identidade visual, logotipos, materiais de marketing e muito mais.</p>
+                    </div>
+                    <div class="cartao-servico">
+                        <img src="servico2.png" alt="Desenvolvimento Web">
+                        <h3>Desenvolvimento Web</h3>
+                        <p>Criação de websites responsivos, e-commerce e sistemas personalizados.</p>
+                    </div>
+                    <div class="cartao-servico">
+                        <img src="servico3.png" alt="Branding Estratégico">
+                        <h3>Branding Estratégico</h3>
+                        <p>Construção e gestão de marcas fortes e memoráveis.</p>
+                    </div>
+                    <div class="cartao-servico">
+                        <img src="servico4.jpg" alt="UI/UX Design">
+                        <h3>UI/UX Design</h3>
+                        <p>Foco na experiência do usuário para interfaces intuitivas e eficazes.</p>
+                    </div>
+                    <div class="cartao-servico">
+                        <img src="servico5.jpg" alt="Marketing Digital">
+                        <h3>Marketing Digital</h3>
+                        <p>Estratégias para aumentar sua visibilidade online e engajamento.</p>
+                    </div>
+                    <div class="cartao-servico">
+                        <img src="servico6.jpg" alt="Consultoria Digital">
+                        <h3>Consultoria Digital</h3>
+                        <p>Orientação especializada para impulsionar sua presença online.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="depoimentos" class="secao depoimentos">
+            <div class="container">
+                <h2>O que nossos clientes dizem</h2>
+                <div class="grid-depoimentos">
+                    <div class="depoimento-cartao">
+                        <p>"A Agência Criativa Web excedeu minhas expectativas! O design do meu site ficou excelente e a
+                            comunicação impecável."</p>
+                        <h4>Micaela Silva</h4>
+                        <span>Empresária</span>
+                    </div>
+                    <div class="depoimento-cartao">
+                        <p>"Profissionalismo e criatividade definem esta agência. Meu e-commerce nunca vendeu tanto!"
+                        </p>
+                        <h4>Estêvão Souza</h4>
+                        <span>Proprietário de E-commerce</span>
+                    </div>
+                    <div class="depoimento-cartao">
+                        <p>"Recomendíssimos! Eles entenderam perfeitamente a minha visão e transformaram-na em
+                            realidade."</p>
+                        <h4>Heloísa Santos</h4>
+                        <span>Designer de Interiores</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="secao">
+            <div class="container">
+                <h2>Entre em contato</h2>
+                <div class="contato-conteudo">
+                    <div class="informacoes-contato">
+                        <p>Contratar serviço? Fale conosco.</p>
+                        <p><strong>Endereço:</strong> Rua Y, XXX - Centro, São Paulo/SP</p>
+                        <p><strong>Telefone:</strong> (11) 00000-0000</p>
+                        <p><strong>E-mail:</strong> contato@agenciacriativaweb.com.br</p>
+                    </div>
+                    <div class="formulario-contato">
+                        <form action="#" method="POST">
+                            <div class="campo-form">
+                                <label for="nome">Nome:</label>
+                                <input type="text" id="nome" name="nome" required>
+                            </div>
+                            <div class="campo-form">
+                                <label for="email">E-mail:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="campo-form">
+                                <label for="mensagem">Mensagem:</label>
+                                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="botao-principal">Enviar mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Agência Criativa Web. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuHamburguer = document.querySelector('.menu-hamburguer');
+            const menuNavegacao = document.querySelector('.menu-navegacao');
+
+            menuHamburguer.addEventListener('click', function () {
+                menuNavegacao.classList.toggle('ativo');
+            });
+
+            // Fechar o menu ao clicar em um item, apenas para dispositivos móveis
+            menuNavegacao.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function () {
+                    if (window.innerWidth <= 768) { // Ajuste o breakpoint conforme o CSS
+                        menuNavegacao.classList.remove('ativo');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
