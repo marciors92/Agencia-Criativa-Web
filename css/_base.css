@@ -1,0 +1,45 @@
+/* css/_base.css */
+
+/* VARIÁVEIS CSS PARA CORES */
+:root {
+    --color-primary: #4b6a4a; /* Verde Oliva Escuro */
+    --color-secondary: #7c9e7b; /* Verde Oliva Médio */
+    --color-accent: #a4c4a3; /* Verde Oliva Claro */
+    --color-text-dark: #333;
+    --color-text-light: #f4f4f4;
+    --color-background-light: #ffffff;
+    --color-background-dark: #f0f0f0;
+}
+
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-background-light);
+}
+
+/* CLASSES UTILITÁRIAS */
+.u-text-center {
+    text-align: center;
+}
+
+.u-margin-bottom-md {
+    margin-bottom: 2rem;
+}
+
+.u-max-width-800 {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
