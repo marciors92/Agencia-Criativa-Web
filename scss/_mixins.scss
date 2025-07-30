@@ -1,0 +1,22 @@
+/* scss/_mixins.scss */
+
+@use 'variaveis' as v;
+
+// Mixin para botão básico
+@mixin botao-basico($fundo, $cor-texto, $padding-y, $padding-x) {
+    display: inline-block;
+    background-color: $fundo;
+    color: $cor-texto;
+    padding: $padding-y $padding-x;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+// Mixin para media queries
+@mixin breakpoint($largura) {
+    @media (max-width: $largura) {
+        @content;
+    }
+}

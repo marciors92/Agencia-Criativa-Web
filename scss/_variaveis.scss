@@ -1,0 +1,23 @@
+/* scss/_variaveis.scss */
+
+// Cores
+$cor-primaria: #4b6a4a; // Verde Oliva Escuro
+$cor-secundaria: #7c9e7b; // Verde Oliva Médio
+$cor-destaque: #a4c4a3; // Verde Oliva Claro
+$cor-texto-escuro: #333;
+$cor-texto-claro: #f4f4f4;
+$cor-fundo-claro: #ffffff;
+$cor-fundo-escuro: #f0f0f0;
+
+// Espaçamentos
+$espacamento-pequeno: 1rem;
+$espacamento-medio: 2rem;
+$espacamento-grande: 3rem;
+$espacamento-extra-grande: 4rem;
+
+// Fontes
+$fonte-principal: 'Arial', sans-serif;
+
+// Tamanhos de tela
+$breakpoint-tablet: 768px;
+$breakpoint-celular: 480px;

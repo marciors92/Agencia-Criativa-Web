@@ -1,0 +1,162 @@
+/* scss/_componentes.scss */
+
+@use 'variaveis' as v;
+@use 'mixins' as m;
+
+// Botão Principal
+.botao-primario {
+    @include m.botao-basico(v.$cor-destaque, v.$cor-texto-escuro, 0.8rem, 1.8rem);
+    margin-top: v.$espacamento-pequeno;
+
+    &:hover {
+        background-color: v.$cor-secundaria;
+        color: v.$cor-texto-claro;
+    }
+
+    @include m.breakpoint(v.$breakpoint-celular) {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+// Cartões de Serviço
+.grid-cartao-servico {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: v.$espacamento-medio;
+    margin-top: v.$espacamento-medio;
+
+    @include m.breakpoint(v.$breakpoint-tablet) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cartao-servico {
+    background-color: v.$cor-fundo-claro;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    &__imagem {
+        max-width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: v.$espacamento-pequeno;
+    }
+
+    &__titulo {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+        color: v.$cor-primaria;
+    }
+
+    &__descricao {
+        font-size: 1rem;
+        color: v.$cor-texto-escuro;
+        margin-bottom: 0;
+    }
+}
+
+// Cartões de Depoimentos
+.grid-cartao-depoimento {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: v.$espacamento-medio;
+    margin-top: v.$espacamento-medio;
+}
+
+.cartao-depoimento {
+    background-color: v.$cor-destaque;
+    color: v.$cor-texto-escuro;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    text-align: left;
+    flex: 1 1 30%;
+    min-width: 280px;
+
+    @include m.breakpoint(v.$breakpoint-tablet) {
+        flex: 1 1 100%;
+    }
+
+    &__texto {
+        font-style: italic;
+        margin-bottom: v.$espacamento-pequeno;
+        font-size: 1.1rem;
+        color: v.$cor-texto-escuro;
+    }
+
+    &__autor {
+        font-size: 1.2rem;
+        margin-bottom: 0.3rem;
+        color: v.$cor-primaria;
+    }
+
+    &__cargo {
+        font-size: 0.9rem;
+        color: v.$cor-primaria;
+    }
+}
+
+// Formulário de Contato
+.formulario-contato {
+    background-color: v.$cor-fundo-claro;
+    padding: v.$espacamento-medio;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    &__campo {
+        margin-bottom: 1.5rem;
+    }
+
+    &__rotulo {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        color: v.$cor-primaria;
+    }
+
+    &__entrada,
+    &__area-texto {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid v.$cor-secundaria;
+        border-radius: 4px;
+        font-size: 1rem;
+
+        @include m.breakpoint(v.$breakpoint-celular) {
+            font-size: 0.9rem;
+        }
+    }
+
+    &__area-texto {
+        resize: vertical;
+    }
+
+    &__botao-enviar {
+        width: 100%;
+        padding: v.$espacamento-pequeno;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        @include m.botao-basico(v.$cor-destaque, v.$cor-texto-escuro, v.$espacamento-pequeno, v.$espacamento-pequeno); // Exemplo de uso do mixin
+
+        &:hover {
+            background-color: v.$cor-secundaria;
+            color: v.$cor-texto-claro;
+        }
+    }
+}

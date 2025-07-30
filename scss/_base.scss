@@ -1,0 +1,36 @@
+/* scss/_base.scss */
+
+@use 'variaveis' as v;
+
+// Reset Básico
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: v.$fonte-principal;
+    line-height: 1.6;
+    color: v.$cor-texto-escuro;
+    background-color: v.$cor-fundo-claro;
+}
+
+// Classes Utilitárias BEM
+.util-texto-centralizado {
+    text-align: center;
+}
+
+.util-margem-inferior-md {
+    margin-bottom: v.$espacamento-medio;
+}
+
+.util-largura-maxima-800 {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
