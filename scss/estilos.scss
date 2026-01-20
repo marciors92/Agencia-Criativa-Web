@@ -1,7 +1,5 @@
-/* scss/estilos.scss */
-
-@use 'variaveis'; // Variáveis devem ser importadas primeiro
-@use 'base';
-@use 'mixins';
-@use 'layout';
-@use 'componentes';
+@import 'variaveis';
+@import 'mixins';
+@import 'base';
+@import 'layout';
+@import 'componentes';
