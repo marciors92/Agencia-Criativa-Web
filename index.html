@@ -1,39 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agência Criativa Web</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
     <header class="cabecalho">
-        <div class="container">
-            <img src="logo.png" alt="Logo" class="logo">
+        <div class="container cabecalho__container">
+            <img src="logo.png" alt="Logo Agência Criativa" class="cabecalho__logo">
             <nav class="menu">
-                <a href="#">Home</a>
-                <a href="#servicos">Serviços</a>
+                <ul class="menu__lista">
+                    <li><a href="#" class="menu__link menu__link--ativo">Home</a></li>
+                    <li><a href="#servicos" class="menu__link">Serviços</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
     <main>
         <section class="banner">
-            <img src="banner.jpg" alt="Banner" class="banner__img">
-            <h1>Criatividade Web</h1>
+            <div class="container">
+                <h1 class="banner__titulo">Criatividade Web</h1>
+            </div>
         </section>
 
         <section id="servicos" class="servicos">
-            <h2>Nossos Serviços</h2>
-            <div class="servicos__grid">
-                <div class="card"><img src="servico1.png" alt="S1"><p>Serviço 1</p></div>
-                <div class="card"><img src="servico2.png" alt="S2"><p>Serviço 2</p></div>
-                <div class="card"><img src="servico3.png" alt="S3"><p>Serviço 3</p></div>
-                <div class="card"><img src="servico4.jpg" alt="S4"><p>Serviço 4</p></div>
-                <div class="card"><img src="servico5.jpg" alt="S5"><p>Serviço 5</p></div>
-                <div class="card"><img src="servico6.jpg" alt="S6"><p>Serviço 6</p></div>
+            <div class="container">
+                <h2 class="servicos__titulo">Nossos Serviços</h2>
+                <div class="servicos__grid">
+                    <article class="card">
+                        <img src="servico1.png" alt="Desenvolvimento" class="card__img">
+                        <h3 class="card__titulo">Desenvolvimento</h3>
+                        <p class="card__descricao">Criação de sites modernos e responsivos.</p>
+                    </article>
+                    <article class="card">
+                        <img src="servico2.png" alt="Web Design" class="card__img">
+                        <h3 class="card__titulo">Web Design</h3>
+                        <p class="card__descricao">Layouts focados na experiência do usuário.</p>
+                    </article>
+                    <article class="card">
+                        <img src="servico3.png" alt="Estratégia" class="card__img">
+                        <h3 class="card__titulo">Estratégia</h3>
+                        <p class="card__descricao">Planejamento digital focado em resultados.</p>
+                    </article>
+                    <article class="card">
+                        <img src="servico4.jpg" alt="UX/UI" class="card__img">
+                        <h3 class="card__titulo">UX/UI</h3>
+                        <p class="card__descricao">Interfaces intuitivas e agradáveis.</p>
+                    </article>
+                    <article class="card">
+                        <img src="servico5.jpg" alt="Marketing" class="card__img">
+                        <h3 class="card__titulo">Marketing</h3>
+                        <p class="card__descricao">Campanhas inteligentes para conversão.</p>
+                    </article>
+                    <article class="card">
+                        <img src="servico6.jpg" alt="Consultoria" class="card__img">
+                        <h3 class="card__titulo">Consultoria</h3>
+                        <p class="card__descricao">Análise detalhada da sua presença online.</p>
+                    </article>
+                </div>
             </div>
         </section>
     </main>
+
+    <footer class="rodape">
+        <p>&copy; 2026 Agência Criativa Web. Todos os direitos reservados.</p>
+    </footer>
 </body>
+
 </html>

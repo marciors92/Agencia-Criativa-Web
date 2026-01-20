@@ -1,5 +1,10 @@
-@import 'variaveis';
-@import 'mixins';
-@import 'base';
-@import 'layout';
-@import 'componentes';
+// 1. Configurações de Dependência (Essenciais para os demais arquivos)
+@import 'variaveis'; // Define cores e fontes
+@import 'mixins';    // Define os atalhos de responsividade
+
+// 2. Configurações Globais
+@import 'base';      // Reseta o navegador e define o box-sizing
+
+// 3. Estrutura e Estética
+@import 'layout';    // Define o Grid e containers
+@import 'componentes'; // Estiliza itens específicos como Cards e Menu
