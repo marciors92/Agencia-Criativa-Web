@@ -1,37 +1,155 @@
-.menu__lista {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-.menu__link {
-    color: $cor-branca; // Visível sobre a imagem
-    text-decoration: none;
-    font-weight: bold;
+// Logo do Cabeçalho
+.cabecalho__logo {
+    max-height: 60px;
+    filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.3)); // Brilho para destacar no fundo
+    transition: $transicao;
 
     &:hover {
-        color: $cor-primaria;
+        transform: scale(1.05);
     }
 }
 
-.cabecalho__logo {
-    max-height: 60px;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2)); // Destaca a logo
+// Menu de Navegação
+.menu {
+    &__lista {
+        display: flex;
+        list-style: none;
+        gap: 25px;
+
+        @include responsivo(mobile) {
+            margin-top: 20px;
+            gap: 15px;
+        }
+    }
+
+    &__link {
+        color: $cor-branca;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        transition: $transicao;
+
+        &:hover {
+            color: $cor-primaria;
+        }
+
+        &--ativo {
+            border-bottom: 2px solid $cor-primaria;
+        }
+    }
 }
 
+// Cards de Serviços (Grid)
 .card {
     background: $cor-branca;
     padding: 30px;
     border-radius: $border-radius;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: $transicao;
 
     &:hover {
         transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
 
     &__img {
         max-width: 80px;
         margin: 0 auto 20px;
+    }
+
+    &__titulo {
+        margin-bottom: 15px;
+        color: $cor-primaria;
+    }
+
+    &__descricao {
+        font-size: 0.95rem;
+        color: #666;
+    }
+}
+
+// Cards de Depoimentos
+.depoimento-card {
+    background: $cor-fundo;
+    padding: 25px;
+    border-radius: $border-radius;
+    max-width: 450px;
+    text-align: left;
+    border-left: 5px solid $cor-primaria;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+
+    &__texto {
+        font-style: italic;
+        margin-bottom: 15px;
+        color: $cor-texto;
+        line-height: 1.6;
+    }
+
+    &__autor {
+        font-weight: bold;
+        color: $cor-primaria;
+        font-size: 1rem;
+    }
+}
+
+// Formulário de Contato
+.formulario {
+    max-width: 600px;
+    margin: 0 auto;
+    background: $cor-branca;
+    padding: 40px;
+    border-radius: $border-radius;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    &__grupo {
+        margin-bottom: 20px;
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: inherit;
+        transition: border-color 0.3s;
+
+        &:focus {
+            outline: none;
+            border-color: $cor-primaria;
+        }
+
+        &--textarea {
+            height: 120px;
+            resize: none;
+        }
+    }
+
+    &__botao {
+        background: $cor-primaria;
+        color: $cor-branca;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        font-weight: bold;
+        font-size: 1rem;
+        text-transform: uppercase;
+        transition: $transicao;
+
+        &:hover {
+            background: darken($cor-primaria, 10%);
+            transform: scale(1.02);
+        }
     }
 }

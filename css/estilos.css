@@ -31,7 +31,8 @@ img {
   top: 0;
   width: 100%;
   z-index: 10;
-  padding: 20px 0;
+  padding: 25px 0;
+  background: transparent;
 }
 .cabecalho__container {
   display: flex;
@@ -44,29 +45,42 @@ img {
   }
 }
 
-.banner {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url("../banner.jpg");
+.hero {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url("../banner.jpg");
   background-size: cover;
   background-position: center;
-  height: 70vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
+  text-align: center;
 }
-.banner__titulo {
+.hero__titulo {
   font-size: 3.5rem;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 768px) {
+  .hero__titulo {
+    font-size: 2.2rem;
+  }
 }
 
 .servicos {
-  padding: 60px 0;
+  padding: 100px 0;
+  background-color: #f8f9fa;
   scroll-margin-top: 80px;
+}
+.servicos__titulo {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2rem;
+  color: #212529;
 }
 .servicos__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 40px;
 }
 @media (max-width: 768px) {
   .servicos__grid {
@@ -74,24 +88,76 @@ img {
   }
 }
 
-.menu__lista {
+.depoimentos {
+  padding: 100px 0;
+  background-color: #ffffff;
+  scroll-margin-top: 80px;
+}
+.depoimentos__titulo {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2rem;
+}
+.depoimentos__grid {
   display: flex;
-  list-style: none;
-  gap: 20px;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-.menu__link {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
+.contato {
+  padding: 100px 0;
+  background-color: #f8f9fa;
+  scroll-margin-top: 80px;
 }
-.menu__link:hover {
-  color: #007bff;
+.contato__titulo {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2rem;
+}
+
+.rodape {
+  background-color: #212529;
+  color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 0.9rem;
 }
 
 .cabecalho__logo {
   max-height: 60px;
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+  filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.3));
+  transition: all 0.3s ease;
+}
+.cabecalho__logo:hover {
+  transform: scale(1.05);
+}
+
+.menu__lista {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+@media (max-width: 768px) {
+  .menu__lista {
+    margin-top: 20px;
+    gap: 15px;
+  }
+}
+.menu__link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+.menu__link:hover {
+  color: #007bff;
+}
+.menu__link--ativo {
+  border-bottom: 2px solid #007bff;
 }
 
 .card {
@@ -99,14 +165,96 @@ img {
   padding: 30px;
   border-radius: 8px;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
 .card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 .card__img {
   max-width: 80px;
   margin: 0 auto 20px;
+}
+.card__titulo {
+  margin-bottom: 15px;
+  color: #007bff;
+}
+.card__descricao {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.depoimento-card {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 8px;
+  max-width: 450px;
+  text-align: left;
+  border-left: 5px solid #007bff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+.depoimento-card__texto {
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #212529;
+  line-height: 1.6;
+}
+.depoimento-card__autor {
+  font-weight: bold;
+  color: #007bff;
+  font-size: 1rem;
+}
+
+.formulario {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+.formulario__grupo {
+  margin-bottom: 20px;
+}
+.formulario__label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.formulario__input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+.formulario__input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.formulario__input--textarea {
+  height: 120px;
+  resize: none;
+}
+.formulario__botao {
+  background: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.formulario__botao:hover {
+  background: rgb(0, 98.4, 204);
+  transform: scale(1.02);
 }
 
 /*# sourceMappingURL=estilos.css.map */

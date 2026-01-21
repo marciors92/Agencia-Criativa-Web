@@ -1,45 +1,107 @@
+// Cabeçalho (Menu flutuante sobre o Banner)
 .cabecalho {
     position: absolute;
     top: 0;
     width: 100%;
     z-index: 10;
-    padding: 20px 0;
+    padding: 25px 0;
     background: transparent;
 
     &__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include responsivo(mobile) {
+            flex-direction: column;
+        }
     }
 }
 
+// Hero Banner (Imagem de fundo completa)
 .hero {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('../banner.jpg');
     background-size: cover;
     background-position: center;
-    height: 70vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: $cor-branca;
+    text-align: center;
 
     &__titulo {
         font-size: 3.5rem;
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6);
+
+        @include responsivo(mobile) {
+            font-size: 2.2rem;
+        }
     }
 }
 
+// Seção de Serviços (Grid)
 .servicos {
-    padding: 80px 0;
-    scroll-margin-top: 100px;
+    padding: 100px 0;
+    background-color: $cor-fundo;
+    scroll-margin-top: 80px;
+
+    &__titulo {
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 2rem;
+        color: $cor-texto;
+    }
 
     &__grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
+        gap: 40px;
 
-        @media (max-width: 768px) {
+        @include responsivo(mobile) {
             grid-template-columns: 1fr;
         }
     }
+}
+
+// Seção de Depoimentos
+.depoimentos {
+    padding: 100px 0;
+    background-color: $cor-branca;
+    scroll-margin-top: 80px;
+
+    &__titulo {
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 2rem;
+    }
+
+    &__grid {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+}
+
+// Seção de Contato
+.contato {
+    padding: 100px 0;
+    background-color: $cor-fundo;
+    scroll-margin-top: 80px;
+
+    &__titulo {
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 2rem;
+    }
+}
+
+// Rodapé
+.rodape {
+    background-color: $cor-texto;
+    color: $cor-branca;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9rem;
 }
